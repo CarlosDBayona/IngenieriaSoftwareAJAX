@@ -20,10 +20,17 @@ import java.util.logging.Logger;
 public class HelloCrunchify extends HttpServlet {
     @Override
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    String Busqueda=request.getParameter("Surn");
+    String Busqueda=request.getParameter("nombre");
     PersonaJpaController controller=new PersonaJpaController();
     List<Persona> list = controller.findPersonaEntities();
-    String json = new Gson().toJson(list);
+    List<Persona> a=new ArrayList<Persona>();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getNombre()==Busqueda) {
+                a.add(list.get(i));
+            }
+        }
+    String json = new Gson().toJson(a);
+    Gson g=new Gson();
     
     response.setContentType("application/json");
     response.setCharacterEncoding("UTF-8");
