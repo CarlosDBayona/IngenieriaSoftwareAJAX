@@ -29,6 +29,7 @@ body {
     <head>
         <title>SO question 4112686</title>
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        
         <script>
             $(document).on("click", "#somebutton", function() {        // When HTML DOM "click" event is invoked on element with ID "somebutton", execute the following function...
                 $.get("CrunchifyServlet", function(responseJson) {          // Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
@@ -44,9 +45,15 @@ body {
 });
         </script>
     </head>
-    <body>
-        <button id="somebutton">press here</button>
-        <div id="somediv"></div>
+    <body>   
+        <div id="somediv">
+             <form action="CrunchifyServlet" method="get">
+            Search:  <input type="text" name="Surn" size="20px"> <br>
+        <input type="submit" value="submit">
+        </form>
+            
+            <button id="somebutton">press here</button>
+        </div>
     </body>
 </body>
 </html>
