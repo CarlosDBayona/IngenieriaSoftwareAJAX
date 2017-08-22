@@ -47,11 +47,11 @@ body {
     </head>
     <body>   
         <div id="somediv">
-             <form action="CrunchifyServlet" method="get">
+             <form method="get">
             Search:  <input type="text" name="Surn" size="20px"> <br>
-             
+             <button id="somebutton">press here</button>
         </form> 
-            <button id="somebutton">press here</button>
+            
         </div>
     </body>
 </body>
