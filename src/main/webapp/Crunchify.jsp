@@ -50,6 +50,7 @@ body {
              <form method="get">
             Search:  <input type="text" name="Surn" size="20px"> <br>
              <button id="somebutton">press here</button>
+             <input type="submit" value="submit">
         </form> 
             
         </div>
