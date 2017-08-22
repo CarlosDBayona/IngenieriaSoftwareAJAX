@@ -46,13 +46,7 @@ body {
         </script>
     </head>
     <body>   
-        <div action="CrunchifyServlet" id="somediv">
-             <form method="get">
-            Search:  <input type="text" name="Surn" size="20px"> <br>
-           
-             <input type="submit" value="submit" id="somebutton">
-        </form> 
-            
+        <div id="somediv"><button id="somebutton">press here</button>
         </div>
     </body>
 </body>
