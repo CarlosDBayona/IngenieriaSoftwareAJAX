@@ -22,13 +22,7 @@ public class HelloCrunchify extends HttpServlet {
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String Busqueda=request.getParameter("Surn");
     PersonaJpaController controller=new PersonaJpaController();
-    List<Persona> list= new ArrayList();
-    List<Persona> a = controller.findPersonaEntities();
-        for (int i = 0; i < a.size(); i++) {
-            if (a.get(i).getNombre()==Busqueda) {
-                list.add(list.get(i));
-            }
-        }
+    List<Persona> list = controller.findPersonaEntities();
     String json = new Gson().toJson(list);
     
     response.setContentType("application/json");
